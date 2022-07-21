@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Pay Thanh Toán</title>
+</head>
+<body>
+    
+            <!--header-->
+    <header id="header">
+        <div class="nav container">
+            <a href="./index.html" class="title__nav-header">
+                <i class='bx bxl-xing'><span>STORE</span></i>
+            </a>
+
+            <div class="nav-menu">
+                <ul class="nav-menu-content">
+                    <a href="./index.html" >
+                        <i class='bx bxs-home-alt-2 ' ></i>
+                        <h2>Home</h2>
+                    </a>
+                    <a href="./shop.html" >
+                        <i class='bx bxs-shopping-bags' ></i>
+                        <h2>Shop</h2>
+                    </a>
+                    <a href="./cart.html" >
+                        <i class='bx bx-cart-download' ></i>
+                        <h2>Cart</h2>
+                    </a>
+                    <a href="./pay.html" class="active">
+                        <i class='bx bxl-paypal' ></i>
+                        <h2>Pay</h2>
+                    </a>
+                    <a href="./blog.html" >
+                        <i class='bx bxl-blogger'></i>
+                        <h2>Blogs</h2>
+                    </a>
+                </ul>
+
+            </div>
+
+            <div class="nav-icon-menu">
+                <div class="bx bx-user" id="user"></div>
+                <div class="bx bx-shopping-bag" id="opencart"></div>
+                <div class="bx bxs-star" id="darkmode"></div>
+                <div class='bx bxs-grid' id="menu" ></div>
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="cart" id="cart">
+        <i class="bx bx-x cart__close"></i>
+        <div class="cart__title-center">
+            <h2>My Cart</h2>
+            <i class='bx bxs-customize'></i>
+        </div>
+        <div class="cart__container">
+            <article class="cart__card">
+                <div class="cart-box">
+                    <img src="./image/cart-1.png" alt="">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">windbreaker</h3>
+                    <span class="cart__price">$23</span>
+                    
+                    <div class="cart__amout">
+                        <div class="cart__amout-content">
+                            <span class="cart__amout-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            
+                            <span class="cart__amout-number">1</span>
+                            
+                            <span class="cart__amout-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+
+                            <i class="bx bx-trash-alt cart__amout-trash"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart-box">
+                    <img src="./image/cart-2.png" alt="">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">Cardigan Hoodie</h3>
+                    <span class="cart__price">$11</span>
+                    
+                    <div class="cart__amout">
+                        <div class="cart__amout-content">
+                            <span class="cart__amout-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            
+                            <span class="cart__amout-number">1</span>
+                            
+                            <span class="cart__amout-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+
+                            <i class="bx bx-trash-alt cart__amout-trash"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart-box">
+                    <img src="./image/cart-3.png" alt="">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">Áo Khoác</h3>
+                    <span class="cart__price">$7</span>
+                    
+                    <div class="cart__amout">
+                        <div class="cart__amout-content">
+                            <span class="cart__amout-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            
+                            <span class="cart__amout-number">1</span>
+                            
+                            <span class="cart__amout-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+
+                            <i class="bx bx-trash-alt cart__amout-trash"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+        </div>
+        <div class="total__cart">
+            <h1>3 items</h1>
+            <h2>Tổng: $76</h2>
+        </div>
+    </div>
+
+
+    <!--login-->
+    <div class="login" id="login">
+        <i class="bx bx-x login__close"></i>
+        <div class="cart__title-center">
+            <h2>Login</h2>
+            <i class='bx bxs-user-account' ></i>
+        </div>
+        <div class="login__container">
+            <input class="input__email" type="text" placeholder="Email">
+            <input type="password" class="input__password" placeholder="Password">
+            <button class="btn">Sign in</button>
+            <h3>Not a member ? <span>Sign up now</span></h3>
+        </div>
+    </div>
+
+    <section>
+        <div class="pay">
+            <h2>ĐANG UPDATE .. . QUAY LẠI SAU</h2>
+        </div>
+    </section>
+
+</body>
+
+    <script src="./src/pay.js"></script>
+</html>

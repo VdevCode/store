@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+    <title>Cart</title>
+</head>
+<body>
+        
+    
+    <!--header-->
+    <header id="header">
+        <div class="nav container">
+            <a href="./index.html" class="title__nav-header">
+                <i class='bx bxl-xing'><span>STORE</span></i>
+            </a>
+
+            <div class="nav-menu">
+                <ul class="nav-menu-content">
+                    <a href="./index.html" >
+                        <i class='bx bxs-home-alt-2 ' ></i>
+                        <h2>Home</h2>
+                    </a>
+                    <a href="./shop.html" >
+                        <i class='bx bxs-shopping-bags' ></i>
+                        <h2>Shop</h2>
+                    </a>
+                    <a href="./cart.html" class="active">
+                        <i class='bx bx-cart-download' ></i>
+                        <h2>Cart</h2>
+                    </a>
+                    <a href="./pay.html">
+                        <i class='bx bxl-paypal' ></i>
+                        <h2>Pay</h2>
+                    </a>
+                    <a href="./blog.html" >
+                        <i class='bx bxl-blogger'></i>
+                        <h2>Blogs</h2>
+                    </a>
+                </ul>
+
+            </div>
+
+            <div class="nav-icon-menu">
+                <div class="bx bx-user" id="user"></div>
+                <div class="bx bx-shopping-bag" id="opencart"></div>
+                <div class="bx bxs-star" id="darkmode"></div>
+                <div class='bx bxs-grid' id="menu" ></div>
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="cart" id="cart">
+        <i class="bx bx-x cart__close"></i>
+        <div class="cart__title-center">
+            <h2>My Cart</h2>
+            <i class='bx bxs-customize'></i>
+        </div>
+        <div class="cart__container">
+            <article class="cart__card">
+                <div class="cart-box">
+                    <img src="./image/cart-1.png" alt="">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">windbreaker</h3>
+                    <span class="cart__price">$23</span>
+                    
+                    <div class="cart__amout">
+                        <div class="cart__amout-content">
+                            <span class="cart__amout-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            
+                            <span class="cart__amout-number">1</span>
+                            
+                            <span class="cart__amout-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+
+                            <i class="bx bx-trash-alt cart__amout-trash"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart-box">
+                    <img src="./image/cart-2.png" alt="">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">Cardigan Hoodie</h3>
+                    <span class="cart__price">$11</span>
+                    
+                    <div class="cart__amout">
+                        <div class="cart__amout-content">
+                            <span class="cart__amout-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            
+                            <span class="cart__amout-number">1</span>
+                            
+                            <span class="cart__amout-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+
+                            <i class="bx bx-trash-alt cart__amout-trash"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart-box">
+                    <img src="./image/cart-3.png" alt="">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">Áo Khoác</h3>
+                    <span class="cart__price">$7</span>
+                    
+                    <div class="cart__amout">
+                        <div class="cart__amout-content">
+                            <span class="cart__amout-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            
+                            <span class="cart__amout-number">1</span>
+                            
+                            <span class="cart__amout-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+
+                            <i class="bx bx-trash-alt cart__amout-trash"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+        </div>
+        <div class="total__cart">
+            <h1>3 items</h1>
+            <h2>Tổng: $76</h2>
+        </div>
+    </div>
+
+
+    <!--login-->
+    <div class="login" id="login">
+        <i class="bx bx-x login__close"></i>
+        <div class="cart__title-center">
+            <h2>Login</h2>
+            <i class='bx bxs-user-account' ></i>
+        </div>
+        <div class="login__container">
+            <input class="input__email" type="text" placeholder="Email">
+            <input type="password" class="input__password" placeholder="Password">
+            <button class="btn">Sign in</button>
+            <h3>Not a member ? <span>Sign up now</span></h3>
+        </div>
+    </div>
+
+    <!--main-->
+    <section class="details section container">
+        <h2 class="breadcrumb__title">Blog Page</h2>
+        <h3 class="breadcrum__subtitle">Home > <span>Carts</span></h3>
+
+        <div class="details__container">
+            <div class="product__images">
+                <div class="product__img">
+                    <div class="details__img-tag">New</div>
+                    <img src="./image/details-1.png" alt="">
+                </div>
+                <div class="product__img">
+                    <img src="./image/details-2.png" alt="">
+                </div>
+                <div class="product__img">
+                    <img src="./image/details-3.png" alt="">
+                </div>
+                <div class="product__img">
+                    <img src="./image/details-4.png" alt="">
+                </div>
+            </div>
+
+            <div class="product__infor">
+                <p class="details__sub">Female > Jackets</p>
+                <h3 class="details__title">Windbreaker,Denim - jacket </h3>
+
+                <div class="rating">
+                    <div class="stars">
+                        <div class="bx bxs-star"></div>
+                        <div class="bx bxs-star"></div>
+                        <div class="bx bxs-star"></div>
+                        <div class="bx bxs-star"></div>  
+                        <div class="bx bxs-star"></div>
+                        <div class="reviews__count">40+ reviews</div>
+
+                    </div>
+                </div>
+
+                <div class="details__prices">
+                    <span class="details__price">$29.99</span>
+                    <span class="details__discount">$14.99</span>
+                    <span class="discount__percentage">50% OFF</span>
+                </div>
+
+                <div class="details__description">
+                    <h3 class="description__title">Product Details</h3>
+                    <div class="description__details">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora suscipit iusto error reprehenderit. Id, hic.</p>
+                    </div>
+                </div>
+
+                <div class="cart__amout">
+                    <div class="cart__amout-content">
+                        <span class="cart__amout-box">
+                            <i class="bx bx-minus"></i>
+                        </span>
+                        
+                        <span class="cart__amout-number">1</span>
+                        
+                        <span class="cart__amout-box">
+                            <i class="bx bx-plus"></i>
+                        </span>
+
+                        <i class="bx bx-heart cart__amout-trash"></i>
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    
+
+    <!--slide-->
+    <section class="new section">
+        <h2 class="section__title">Related Product</h2>
+        <div class="new__container container">
+            <div class="swiper new-swiper">
+                <div class="swiper-wrapper">
+                <div class="new__content swiper-slide">
+                    <div class="new__tag">Sale</div>
+                    <img src="./image/new-1.png" alt="">
+                    <h3 class="new__title">windbreaker Jacket</h3>
+                    <span class="new__subtitle">Accessory</span>
+
+                    <div class="new__prices">
+                        <div class="new__price">$14.99</div>
+                        <div class="new__discount">$29.99</div>
+
+
+                    </div>
+
+                    <a href="" class="btn__cart">
+                        <i class="bx bx-cart-alt"></i>
+                    </a>
+                </div>
+                <div class="new__content swiper-slide">
+                    <div class="new__tag">New</div>
+                    <img src="./image/new-2.png" alt="">
+                    <h3 class="new__title">windbreaker Jacket</h3>
+                    <span class="new__subtitle">Accessory</span>
+
+                    <div class="new__prices">
+                        <div class="new__price">$14.99</div>
+                        <div class="new__discount">$29.99</div>
+
+
+                    </div>
+
+                    <a href="" class="btn__cart">
+                        <i class="bx bx-cart-alt"></i>
+                    </a>
+                </div>
+                <div class="new__content swiper-slide">
+                    <div class="new__tag">New</div>
+                    <img src="./image/new-3.png" alt="">
+                    <h3 class="new__title">windbreaker Jacket</h3>
+                    <span class="new__subtitle">Accessory</span>
+
+                    <div class="new__prices">
+                        <div class="new__price">$14.99</div>
+                        <div class="new__discount">$29.99</div>
+
+
+                    </div>
+
+                    <a href="" class="btn__cart">
+                        <i class="bx bx-cart-alt"></i>
+                    </a>
+                </div>
+                <div class="new__content swiper-slide">
+                    <div class="new__tag">New</div>
+                    <img src="./image/new-4.png" alt="">
+                    <h3 class="new__title">windbreaker Jacket</h3>
+                    <span class="new__subtitle">Accessory</span>
+
+                    <div class="new__prices">
+                        <div class="new__price">$14.99</div>
+                        <div class="new__discount">$29.99</div>
+
+
+                    </div>
+
+                    <a href="" class="btn__cart">
+                        <i class="bx bx-cart-alt"></i>
+                    </a>
+                </div>
+                <div class="new__content swiper-slide">
+                    <div class="new__tag">New</div>
+                    <img src="./image/new-5.png" alt="">
+                    <h3 class="new__title">windbreaker Jacket</h3>
+                    <span class="new__subtitle">Accessory</span>
+
+                    <div class="new__prices">
+                        <div class="new__price">$14.99</div>
+                        <div class="new__discount">$29.99</div>
+
+
+                    </div>
+
+                    <a href="" class="btn__cart">
+                        <i class="bx bx-cart-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+      
+        </div>
+    </section>
+
+
+    <!--lightbox-->
+
+    <div class="lightbox ">
+        <div class="lightbox__content">
+            <div class="lightbox__close">&times;</div>
+            <img class="lightbox__img" src="./image/details-1.png" alt="">
+            
+            <div class="lightbox__caption">
+                <div class="caption__text">STORE</div>
+                <div class="caption__counter">1 of 4</div>
+            </div>
+        </div>
+
+       
+
+        <div class="lightbox__controls">
+            <div class="prev__item" onclick="prevItems()">
+                <i class="bx bx-chevron-left"></i>            
+            </div>
+
+            <div class="next__item" onclick="nextItems()">
+                <i class="bx bx-chevron-right"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+       <section class="newsletter section">
+        <div class="newsletter_container container">
+            <h2 class="section__title">Our Newsletter</h2>
+            
+            <form action="" class="newsletter__form">
+                <input type="text" class="newsletter__input" placeholder="Your name" required>
+                <button class="btn">Subscriber</button>
+            </form>
+        </div>
+    </section> 
+
+</body>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="./src/cart.js"></script>
+</html>

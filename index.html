@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+    <title>Home</title>
+</head>
+<body>
+        <!--header-->
+        <header id="header">
+            <div class="nav container">
+                <a href="./index.html" class="title__nav-header">
+                    <i class='bx bxl-xing'><span>STORE</span></i>
+                </a>
+
+                <div class="nav-menu">
+                    <ul class="nav-menu-content">
+                        <a href="./index.html" class="active">
+                            <i class='bx bxs-home-alt-2 ' ></i>
+                            <h2>Home</h2>
+                        </a>
+                        <a href="./shop.html">
+                            <i class='bx bxs-shopping-bags' ></i>
+                            <h2>Shop</h2>
+                        </a>
+                        <a href="./cart.html">
+                            <i class='bx bx-cart-download' ></i>
+                            <h2>Cart</h2>
+                        </a>
+                        <a href="./pay.html">
+                            <i class='bx bxl-paypal' ></i>
+                            <h2>Pay</h2>
+                        </a>
+                        <a href="./blog.html">
+                            <i class='bx bxl-blogger'></i>
+                            <h2>Blogs</h2>
+                        </a>
+                    </ul>
+
+                </div>
+
+                <div class="nav-icon-menu">
+                    <div class="bx bx-user" id="user"></div>
+                    <div class="bx bx-shopping-bag" id="opencart"></div>
+                    <div class="bx bxs-star" id="darkmode"></div>
+                    <div class='bx bxs-grid' id="menu" ></div>
+                </div>
+            </div>
+        </header>
+
+        <!--Card(right)-->
+
+        <div class="cart" id="cart">
+            <i class="bx bx-x cart__close"></i>
+            <div class="cart__title-center">
+                <h2>My Cart</h2>
+                <i class='bx bxs-customize'></i>
+            </div>
+            <div class="cart__container">
+                <article class="cart__card">
+                    <div class="cart-box">
+                        <img src="./image/cart-1.png" alt="">
+                    </div>
+                    <div class="cart__details">
+                        <h3 class="cart__title">windbreaker</h3>
+                        <span class="cart__price">$23</span>
+                        
+                        <div class="cart__amout">
+                            <div class="cart__amout-content">
+                                <span class="cart__amout-box">
+                                    <i class="bx bx-minus"></i>
+                                </span>
+                                
+                                <span class="cart__amout-number">1</span>
+                                
+                                <span class="cart__amout-box">
+                                    <i class="bx bx-plus"></i>
+                                </span>
+
+                                <i class="bx bx-trash-alt cart__amout-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cart__card">
+                    <div class="cart-box">
+                        <img src="./image/cart-2.png" alt="">
+                    </div>
+                    <div class="cart__details">
+                        <h3 class="cart__title">Cardigan Hoodie</h3>
+                        <span class="cart__price">$11</span>
+                        
+                        <div class="cart__amout">
+                            <div class="cart__amout-content">
+                                <span class="cart__amout-box">
+                                    <i class="bx bx-minus"></i>
+                                </span>
+                                
+                                <span class="cart__amout-number">1</span>
+                                
+                                <span class="cart__amout-box">
+                                    <i class="bx bx-plus"></i>
+                                </span>
+
+                                <i class="bx bx-trash-alt cart__amout-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cart__card">
+                    <div class="cart-box">
+                        <img src="./image/cart-3.png" alt="">
+                    </div>
+                    <div class="cart__details">
+                        <h3 class="cart__title">Áo Khoác</h3>
+                        <span class="cart__price">$7</span>
+                        
+                        <div class="cart__amout">
+                            <div class="cart__amout-content">
+                                <span class="cart__amout-box">
+                                    <i class="bx bx-minus"></i>
+                                </span>
+                                
+                                <span class="cart__amout-number">1</span>
+                                
+                                <span class="cart__amout-box">
+                                    <i class="bx bx-plus"></i>
+                                </span>
+
+                                <i class="bx bx-trash-alt cart__amout-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+            </div>
+            <div class="total__cart">
+                <h1>3 items</h1>
+                <h2>Tổng: $76</h2>
+            </div>
+        </div>
+
+
+        <!--login-->
+        <div class="login" id="login">
+            <i class="bx bx-x login__close"></i>
+            <div class="cart__title-center">
+                <h2>Login</h2>
+                <i class='bx bxs-user-account' ></i>
+            </div>
+            <div class="login__container">
+                <input class="input__email" type="text" placeholder="Email">
+                <input type="password" class="input__password" placeholder="Password">
+                <button class="btn">Sign in</button>
+                <h3>Not a member ? <span>Sign up now</span></h3>
+            </div>
+        </div>
+
+        <!--main-->
+        <main id="main" class="main">
+            <section class="home container">
+                <div class="swiper home-swiper">
+                    <div class="swiper-wrapper">
+                        <section class="swiper-slide">
+                            <div class="home__content grid">
+                                <div class="home__group">
+                                    <img class="home__img" src="./image/slide-2.png" alt="">
+                                    <div class="home__indicator"></div>
+                                    <div class="home_-details-img">
+                                        <h4 class="home__details-title">Modern World</h4>
+                                        <span class="home__details-subtitle">woolen</span>
+                                    </div>
+                                </div>
+
+                                <div class="home__data">
+                                    <h3 class="home__subtitle">#1Trending Items</h3>
+                                    <h1 class="home__title">Original <span>is never<br>finished</br></span></h1>
+                                    <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eaque quam quia nostrum cupiditate sed sapiente sint alias repellat quod officia earum labore quo dolorem odit expedita, vitae quis magni?</p>
+                                    <div class="home__buttons">
+                                        <a href="" class="btn">Buy Now</a>
+                                        <a href="" class="view-details">
+                                            <h1>View Details</h1>
+                                            <i class='bx bx-right-arrow-alt'></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="swiper-slide">
+                            <div class="home__content grid">
+                                <div class="home__group">
+                                    <img class="home__img" src="./image/slide-3.png" alt="">
+                                    <div class="home__indicator"></div>
+                                    <div class="home_-details-img">
+                                        <h4 class="home__details-title">Beautiful</h4>
+                                        <span class="home__details-subtitle">woolen</span>
+                                    </div>
+                                </div>
+
+                                <div class="home__data">
+                                    <h3 class="home__subtitle">#2Trending Items</h3>
+                                    <h1 class="home__title">Original <span>is never<br>finished</br></span></h1>
+                                    <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eaque quam quia nostrum cupiditate sed sapiente sint alias repellat quod officia earum labore quo dolorem odit expedita, vitae quis magni?</p>
+                                    <div class="home__buttons">
+                                        <a href="" class="btn">Buy Now</a>
+                                        <a href="" class="view-details">
+                                            <h1>View Details</h1>
+                                            <i class='bx bx-right-arrow-alt'></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                           <section class="swiper-slide">
+                            <div class="home__content grid">
+                                <div class="home__group">
+                                    <img class="home__img" src="./image/details-4.png" alt="">
+                                    <div class="home__indicator"></div>
+                                    <div class="home_-details-img">
+                                        <h4 class="home__details-title">Luxury</h4>
+                                        <span class="home__details-subtitle">woolen</span>
+                                    </div>
+                                </div>
+
+                                <div class="home__data">
+                                    <h3 class="home__subtitle">#3Trending Items</h3>
+                                    <h1 class="home__title">Original <span>is never<br>finished</br></span></h1>
+                                    <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eaque quam quia nostrum cupiditate sed sapiente sint alias repellat quod officia earum labore quo dolorem odit expedita, vitae quis magni?</p>
+                                    <div class="home__buttons">
+                                        <a href="" class="btn">Buy Now</a>
+                                        <a href="" class="view-details">
+                                            <h1>View Details</h1>
+                                            <i class='bx bx-right-arrow-alt'></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--discount-->
+        <div class="discount__container">
+            <div class="discount-section">
+                <img class="changeImage" src="./image/discount.png" alt="">
+                <div class="infor__discount">
+                    <h3>Sale 50% <span>On Product</span></h3>
+                    <a href="#" class="btn">View</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Sections Viewer-->
+        <section class="new section">
+            <h2 class="section__title">New Arrival</h2>
+            <div class="new__container container">
+                <div class="swiper new-swiper">
+                    <div class="swiper-wrapper">
+                    <div class="new__content swiper-slide">
+                        <div class="new__tag">Sale</div>
+                        <img src="./image/new-1.png" alt="">
+                        <h3 class="new__title">windbreaker Jacket</h3>
+                        <span class="new__subtitle">Accessory</span>
+
+                        <div class="new__prices">
+                            <div class="new__price">$14.99</div>
+                            <div class="new__discount">$29.99</div>
+
+
+                        </div>
+
+                        <a href="" class="btn__cart">
+                            <i class="bx bx-cart-alt"></i>
+                        </a>
+                    </div>
+                    <div class="new__content swiper-slide">
+                        <div class="new__tag">New</div>
+                        <img src="./image/new-2.png" alt="">
+                        <h3 class="new__title">windbreaker Jacket</h3>
+                        <span class="new__subtitle">Accessory</span>
+
+                        <div class="new__prices">
+                            <div class="new__price">$14.99</div>
+                            <div class="new__discount">$29.99</div>
+
+
+                        </div>
+
+                        <a href="" class="btn__cart">
+                            <i class="bx bx-cart-alt"></i>
+                        </a>
+                    </div>
+                    <div class="new__content swiper-slide">
+                        <div class="new__tag">New</div>
+                        <img src="./image/new-3.png" alt="">
+                        <h3 class="new__title">windbreaker Jacket</h3>
+                        <span class="new__subtitle">Accessory</span>
+
+                        <div class="new__prices">
+                            <div class="new__price">$14.99</div>
+                            <div class="new__discount">$29.99</div>
+
+
+                        </div>
+
+                        <a href="" class="btn__cart">
+                            <i class="bx bx-cart-alt"></i>
+                        </a>
+                    </div>
+                    <div class="new__content swiper-slide">
+                        <div class="new__tag">New</div>
+                        <img src="./image/new-4.png" alt="">
+                        <h3 class="new__title">windbreaker Jacket</h3>
+                        <span class="new__subtitle">Accessory</span>
+
+                        <div class="new__prices">
+                            <div class="new__price">$14.99</div>
+                            <div class="new__discount">$29.99</div>
+
+
+                        </div>
+
+                        <a href="" class="btn__cart">
+                            <i class="bx bx-cart-alt"></i>
+                        </a>
+                    </div>
+                    <div class="new__content swiper-slide">
+                        <div class="new__tag">New</div>
+                        <img src="./image/new-5.png" alt="">
+                        <h3 class="new__title">windbreaker Jacket</h3>
+                        <span class="new__subtitle">Accessory</span>
+
+                        <div class="new__prices">
+                            <div class="new__price">$14.99</div>
+                            <div class="new__discount">$29.99</div>
+
+
+                        </div>
+
+                        <a href="" class="btn__cart">
+                            <i class="bx bx-cart-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+          
+            </div>
+        </section>
+
+        <!--Steps sections-->
+        <section class="steps section container">
+            <div class="steps__bg">
+                <h2 class="section__title">How to order product from <span>Store</span></h2>
+
+                <div class="steps__container grid">
+                    <div class="steps__card">
+                        <div class="steps__card-number">01</div>
+                        <h3 class="steps__card-title">Chooses Product</h3>
+                        <p class="steps__card-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, beatae.
+                        </p>
+                    </div>
+
+                    <div class="steps__card">
+                        <div class="steps__card-number">02</div>
+                        <h3 class="steps__card-title">Uses Product</h3>
+                        <p class="steps__card-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, beatae.
+                        </p>
+                    </div>
+
+                    <div class="steps__card">
+                        <div class="steps__card-number">03</div>
+                        <h3 class="steps__card-title">Rating Product</h3>
+                        <p class="steps__card-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, beatae.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--news letter-->
+
+        <section class="newsletter section">
+            <div class="newsletter_container container">
+                <h2 class="section__title">Our Newsletter</h2>
+                
+                <form action="" class="newsletter__form">
+                    <input type="text" class="newsletter__input" placeholder="Your name" required>
+                    <button class="btn">Subscriber</button>
+                </form>
+            </div>
+        </section>
+
+        <!--scroll-top-->
+
+        <a href="#" class="scroll__top">
+            <i class='bx bxs-to-top' ></i>
+        </a>
+
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="./src/index.js"></script>
+</body>
+</html>
