@@ -164,3 +164,28 @@ function changeItem(){
 lightboxClose.addEventListener('click',function(){
     lightbox.classList.remove('open')
 })
+
+
+//select color from cart
+const colorBtn = document.querySelectorAll('.color-groups div')
+colorBtn.forEach(color =>{
+    color.addEventListener('click',function(){
+        let colorNameClass = color.className
+        if(!color.classList.contains('active-color')){
+            let colorName = colorNameClass.slice(colorNameClass.indexOf('-') +1,colorNameClass.length)
+            resetActiveBtn()
+            color.classList.add('active-color')
+            setNewColor(colorName)
+        }
+    })
+})
+
+function resetActiveBtn(){
+    colorBtn.forEach(color =>{
+        color.classList.remove('active-color')
+    })
+}
+
+function setNewColor(color){
+    document.querySelector('.banner-change-color img').src = `./image/tshirt_${color}.png`
+}

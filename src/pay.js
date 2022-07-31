@@ -47,3 +47,31 @@ openLogin.addEventListener('click',function(){
 loseLogin.addEventListener('click',function(){
     showLogin.classList.remove('active')
 })
+
+
+//card payment
+const numberInput = document.querySelector('.card-number-input')
+numberInput.addEventListener('input',function(){
+        const cardChangeNumber = document.querySelector('.card__number-box')
+        cardChangeNumber.innerText = numberInput.value
+       
+})
+
+const holderInput = document.querySelector('.card-holder-input')
+holderInput.addEventListener('input',function(){
+        const cardChangeHolder = document.querySelector('.card__holder-name')
+        cardChangeHolder.innerText = holderInput.value
+})
+
+const monthInput = document.querySelector('.month-input')
+monthInput.addEventListener('input',function(){
+        const cardChangeMonth = document.querySelector('.exp-month')
+        cardChangeMonth.innerText = monthInput.value
+})
+
+const yearInput = document.querySelector('.year-input')
+yearInput.addEventListener('input',function(){
+        const cardChangeYear = document.querySelector('.exp-year')
+        cardChangeYear.innerText = yearInput.value
+})
+

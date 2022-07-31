@@ -122,14 +122,79 @@ loseLogin.addEventListener('click',function(){
 
 //scroll Top
 
-// function scrollUp(){
-//     const scrollTop = document.querySelector('.scroll__top')
-//     if(this.scrollY >= 350){
+function scrollUp(){
+    const scrollTop = document.querySelector('.scroll__top')
+    if(this.scrollY >= 350){
        
-//         scrollTop.classList.toggle('active')
-//     }else{
-//         scrollTop.classList.remove('active')
-//     }
-// }
+        scrollTop.classList.toggle('active')
+    }else{
+        scrollTop.classList.remove('active')
+    }
+}
 
-// window.addEventListener('scroll',scrollUp)
+window.addEventListener('scroll',scrollUp)
+
+const mainImage = document.getElementById('main_Image')
+const slickImage = document.getElementsByClassName('smail_img')
+
+slickImage[0].addEventListener('click',function(){
+    mainImage.src = slickImage[0].src
+})
+
+slickImage[1].addEventListener('click',function(){
+    mainImage.src = slickImage[1].src
+})
+
+slickImage[2].addEventListener('click',function(){
+    mainImage.src = slickImage[2].src
+})
+
+slickImage[3].addEventListener('click',function(){
+    mainImage.src = slickImage[3].src
+})
+
+//filter shop cart
+
+const btnAll = document.querySelectorAll('.filter__box a')
+const storeProduct = document.querySelectorAll('.store-product')
+
+for (i = 0;i < btnAll.length;i++){
+    btnAll[i].addEventListener('click',(e) =>{
+        e.preventDefault()
+
+        const filter = e.target.dataset.filter
+
+        storeProduct.forEach((product) =>{
+            if(filter == 'all'){
+                product.style.display = 'block'
+            }else{
+                if(product.classList.contains(filter)){
+                    product.style.display ='block'
+                }
+                else{
+                    product.style.display ='none'
+                }
+            }
+        })
+    })
+}
+
+//filter search to shop
+const searchFilter = document.getElementById('search__filter')
+
+searchFilter.addEventListener('keyup',(e) =>{
+    e.preventDefault()
+    const searchValue = searchFilter.value.toLowerCase().trim()
+    
+    for(i = 0;i < storeProduct.length;i++){
+        if(storeProduct[i].classList.contains(searchValue)){
+            storeProduct[i].style.display = 'block'
+        }
+        else if(searchValue == ""){
+            storeProduct[i].style.display = 'block'
+        }
+        else{
+            storeProduct[i].style.display ='none'
+        }
+    }
+})

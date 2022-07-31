@@ -1,7 +1,7 @@
 const openMenu = document.querySelector('#menu')
 const showMenu = document.querySelector('.nav-menu-content')
 
-openMenu.addEventListener('click',function(){
+openMenu.addEventListener('click', function () {
     showMenu.classList.toggle('active')
     showCart.classList.remove('active')
     showLogin.classList.remove('active')
@@ -9,12 +9,12 @@ openMenu.addEventListener('click',function(){
 
 //darkmode
 const openDarkmode = document.querySelector('#darkmode')
-openDarkmode.addEventListener('click',function(){
+openDarkmode.addEventListener('click', function () {
     openDarkmode.classList.toggle('bxs-sun')
-    if(openDarkmode.classList.contains('bxs-sun')){
+    if (openDarkmode.classList.contains('bxs-sun')) {
         document.body.classList.toggle('active')
     }
-    else{
+    else {
         document.body.classList.remove('active')
     }
 })
@@ -24,13 +24,13 @@ const openCart = document.querySelector('#opencart')
 const showCart = document.querySelector('.cart')
 const closeCart = document.querySelector('.cart__close')
 
-openCart.addEventListener('click',function(){
+openCart.addEventListener('click', function () {
     showCart.classList.toggle('active')
     showMenu.classList.remove('active')
     showLogin.classList.remove('active')
 })
 
-closeCart.addEventListener('click',function(){
+closeCart.addEventListener('click', function () {
     showCart.classList.remove('active')
 })
 
@@ -39,97 +39,89 @@ const openLogin = document.querySelector('#user')
 const showLogin = document.querySelector('.login')
 const loseLogin = document.querySelector(".login__close")
 
-openLogin.addEventListener('click',function(){
+openLogin.addEventListener('click', function () {
     showLogin.classList.toggle('active')
     showMenu.classList.remove('active')
     showCart.classList.remove('active')
 })
-loseLogin.addEventListener('click',function(){
+loseLogin.addEventListener('click', function () {
     showLogin.classList.remove('active')
 })
 
-//swiper
-// var swiper = new Swiper(".home-swiper", {
-//     spaceBetween: 30,
-//     centeredSlides: true,
-//     autoplay: {
-//       delay: 2500,
-//       disableOnInteraction: false,
-//     },
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//   });
+//timeday
 
-//scroll header
+function displayTimer() {
+    var datetime = new Date()
+    var hours = datetime.getHours()
+    var minutes = datetime.getMinutes()
+    var seconds = datetime.getSeconds()
+    var sessions = document.getElementById('session')
 
-// function scrollHeader(){
-//     const header = document.querySelector('#header')
-//     if(this.scrollY >= 50){
-//         header.classList.add('scroll-header')
-//     }else{
-//         header.classList.remove('scroll-header')
-//     }
-// }
+    document.getElementById('hours').innerHTML = hours + "giờ"
+    document.getElementById('minutes').innerHTML = minutes + "phút"
+    document.getElementById('seconds').innerHTML = seconds + "giây"
 
+    if (hours >= 12 && hours < 16) {
+        sessions.innerHTML = "Trưa"
+    } else if (hours >= 16 && hours < 18) {
+        sessions.innerHTML = "Chiều"
+    }
+    else if (hours >= 18 && hours < 24) {
+        sessions.innerHTML = "Tối"
+    }
+    else {
+        seconds.innerHTML = "Sáng"
+    }
 
-//swiper arrivals
-// var newswiper = new Swiper(".new-swiper", {
-//     slidesPerView: 1,
-//     autoplay: {
-//         delay: 2500,
-//         disableOnInteraction: false,
-//       },
-//     spaceBetween: 10,
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//     breakpoints: {
-//       "@0.00": {
-//         slidesPerView: 1,
-//         spaceBetween: 10,
-//       },
-//       "@0.75": {
-//         slidesPerView: 2,
-//         spaceBetween: 20,
-//       },
-//       "@1.00": {
-//         slidesPerView: 3,
-//         spaceBetween: 40,
-//       },
-//       "@1.50": {
-//         slidesPerView: 4,
-//         spaceBetween: 50,
-//       },
-//     },
-//   });
+}
+
+setInterval(displayTimer, 1000)
 
 
-//change image
-// const image = document.querySelector('.changeImage')
-// const listImage = ['./image/product-1.png','./image/product-2.png','./image/discount.png','./image/product-3.png','./image/product-4.png','./image/product-5.png']
+function scrollUp() {
+    const scrollTop = document.querySelector('.scroll__top')
+    if (this.scrollY >= 350) {
 
-// setInterval(function(){
-//     var randomImage = Math.floor(Math.random() *6)
-//     image.src = listImage[randomImage]
-// },4000)
+        scrollTop.classList.toggle('active')
+    } else {
+        scrollTop.classList.remove('active')
+    }
+}
 
-//scroll Top
+window.addEventListener('scroll', scrollUp)
 
-// function scrollUp(){
-//     const scrollTop = document.querySelector('.scroll__top')
-//     if(this.scrollY >= 350){
-       
-//         scrollTop.classList.toggle('active')
-//     }else{
-//         scrollTop.classList.remove('active')
-//     }
-// }
+//liked blogs
+const likeBtn = document.querySelectorAll('.like__more-view')
+let iconLike = document.querySelector('#liked__view')
+let countLike = document.querySelector('.counter__like-view')
 
-// window.addEventListener('scroll',scrollUp)
+let clicked = false
+
+
+// likeBtn.addEventListener('click', () => {
+//         if (!clicked) {
+//             clicked = true
+//             iconLike.innerHTML = `<i class='bx bxs-like' id="liked__view"></i>`
+//             countLike.textContent++
+//         }
+//         else {
+//             clicked = false
+//             iconLike.innerHTML = `<i class='bx bx-like' id="liked__view"></i>`
+//             countLike.textContent--
+//         }
+//     })
+
+likeBtn.forEach(function(like){
+    like.addEventListener('click',function(){
+        
+        if(like.classList.contains('bx-like')[0]){
+            clicked = true
+            iconLike.innerHTML = `<i class='bx bxs-like' id="liked__view"></i>`
+            countLike.textContent++
+        }else{
+            clicked = false
+            iconLike.innerHTML = `<i class='bx bx-like' id="liked__view"></i>`
+            countLike.textContent--
+        }
+    })
+})
